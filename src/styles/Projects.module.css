@@ -43,3 +43,15 @@
     display: flex;
     gap: 8px;
 }
+
+.showButton {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+    justify-content: end;
+    margin-top: 60px;
+}
+
+.showButton button {
+    cursor: pointer;
+}

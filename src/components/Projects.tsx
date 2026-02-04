@@ -34,7 +34,7 @@ export default function Projects() {
 				))}
 			</div>
 
-			<div className="showAllButton">
+			<div className={styles.showButton}>
 				<button style={{color:"white"}} onClick={() => {setShowAll((prev:boolean) => !prev)}}>
 					{showAll ? "Less" : "All Projects"}
 				</button>
