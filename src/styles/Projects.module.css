@@ -7,7 +7,7 @@
     max-width: 1600px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 80px;
    
 }
@@ -22,7 +22,7 @@
 }
 
 .projectImage {
-    width: 480px;
+    width: 100%;
     height: 230px;
     object-fit: cover;
 }
