@@ -1,0 +1,29 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    max-width: 800px;
+    min-height: 90vh;
+    margin: 0 auto;
+}
+
+.details {
+
+}
+
+.portraitImage {
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    /* border-radius: 10px; */
+}
+
+.heading {
+    color: var(--fg)
+}
+
+.paragraph {
+    color: var(--gray);
+    word-spacing: 1px;
+}

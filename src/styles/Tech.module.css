@@ -1,0 +1,37 @@
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 180px;
+}
+
+.topGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+}
+
+.bottomGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: center;
+}
+
+.icon {
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.icon svg {
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    background-color: var(--fg);
+}
+.icon:hover svg{
+    fill: var(--bg);
+}

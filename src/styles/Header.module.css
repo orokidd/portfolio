@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 20px;
+}
+
+.siteIcon {
+    width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.navigations {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}

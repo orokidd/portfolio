@@ -1,0 +1,45 @@
+.projectHeading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+   
+}
+
+.project {
+    padding: 18px;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    background-color: var(--bg-alt);
+}
+
+.projectImage {
+    width: 480px;
+    height: 230px;
+    object-fit: cover;
+}
+
+.projectDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    color: var(--gray);
+    transition: all 0.3s ease;
+}
+
+.project:hover .projectDetails{
+    color: var(--fg);
+}
+
+.links {
+    display: flex;
+    gap: 8px;
+}
