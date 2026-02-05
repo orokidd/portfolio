@@ -17,7 +17,7 @@ import projMembers from '../assets/proj-members-only.png'
 import projBlog from '../assets/proj-blog-post.png'
 
 
-type Projects = {
+export type Projects = {
     id: number;
     name: string;
     tech: string[];
@@ -26,9 +26,9 @@ type Projects = {
         github: string;
     };
     image: string;
-}[];
+};
 
-export const projects:Projects = [
+export const projects:Projects[] = [
   {
     id: 1,
     name: "Book Collection",
@@ -186,7 +186,7 @@ export const projects:Projects = [
   {
     id: 15,
     name: "File Uploader",
-    tech: ["Node", "Express", "PostgreSQL", "EJS", "Prisma", "Supabase", "Passport.js"],
+    tech: ["Node", "Express", "PostgreSQL", "EJS", "Prisma", "Supabase", "Passport"],
     links: {
       demo: "https://orokidd-file-uploader.onrender.com/",
       github: "https://github.com/orokidd/file-uploader",
@@ -197,7 +197,7 @@ export const projects:Projects = [
   {
     id: 16,
     name: "Members Post Board",
-    tech: ["Node", "Express", "PostgreSQL", "EJS", "Prisma", "Passport.js"],
+    tech: ["Node", "Express", "PostgreSQL", "EJS", "Prisma", "Passport"],
     links: {
       demo: "https://orokidd-members-only.onrender.com/",
       github: "https://github.com/orokidd/members-only",

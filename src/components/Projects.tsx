@@ -1,43 +1,40 @@
-import { projects } from "../assets/projects";
 import styles from "../styles/Projects.module.css";
 import { DemoIcon, GithubIcon } from "./Icons";
-import { useState } from "react";
+import type { Projects } from "../assets/projects";
 
-export default function Projects() {
-	const [showAll, setShowAll] = useState<boolean>(false)
-    const sortedProject = [...projects].reverse()
-	const limitedProject = sortedProject.slice(0, 9)
+type ProjectsProps = {
+	projects: Projects[];
+};
 
-	const showProject = showAll ? sortedProject : limitedProject
-
+export default function Projects({ projects }: ProjectsProps) {
 	return (
 		<>
 			<h2 className={styles.projectHeading}>PROJECTS</h2>
 			<div className={styles.projects}>
-				{showProject.map((project) => (
-					<div className={styles.project}>
+				{projects.map((project) => (
+					<div className={styles.project} key={project.id}>
 						<img src={project.image} alt="" className={styles.projectImage} />
 
 						<div className={styles.projectDetails}>
-							<p>{project.name}</p>
+							<p className={styles.projectTitle}>{project.name}</p>
 
 							<div className={styles.links}>
 								<a href={project.links.github}>
-                                    <GithubIcon />
-                                </a>
+									<GithubIcon />
+								</a>
 								<a href={project.links.demo}>
-                                    <DemoIcon />
-                                </a>
+									<DemoIcon />
+								</a>
 							</div>
+						</div>
+
+						<div className={styles.techStack}>
+							{project.tech.map((stack) => (
+								<div className={styles.stackName}>{stack}</div>
+							))}
 						</div>
 					</div>
 				))}
-			</div>
-
-			<div className={styles.showButton}>
-				<button style={{color:"white"}} onClick={() => {setShowAll((prev:boolean) => !prev)}}>
-					{showAll ? "Less" : "All Projects"}
-				</button>
 			</div>
 		</>
 	);
