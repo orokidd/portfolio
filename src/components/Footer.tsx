@@ -22,12 +22,12 @@ export default function Footer() {
         <div className={styles.contact}>
             <p className={styles.orokidd}>orokidd</p>
 			<div className={styles.links}>
-					<p className={styles.work}>Work</p>
-					<p className={styles.lab}>Lab</p>
-                    <p className={styles.email}>Email</p>
-					<p className={styles.github}>Github</p>
-					<p className={styles.insta}>Instagram</p>
-                    <p className={styles.linkedIn}>LinkedIn</p>
+					<a href="#" className={styles.work}>Work</a>
+					<a href="#" className={styles.lab}>Lab</a>
+                    <a href="#" className={styles.email}>Email</a>
+					<a href="https://github.com/orokidd" className={styles.github} target="_blank">Github</a>
+					<a href="https://www.instagram.com/hudaahuu/" className={styles.insta} target="_blank">Instagram</a>
+                    <a href="#" className={styles.linkedIn}>LinkedIn</a>
 			</div>
 		</div>
 	);
