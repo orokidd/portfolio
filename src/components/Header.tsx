@@ -9,8 +9,9 @@ export default function Header() {
 				<img src={heroIcon} alt="" className={styles.siteIcon} />
 			</Link>
 			<div className={styles.navigations}>
-				<Link to="/resume">Resume</Link>
-				<a href="#">Blog</a>
+				<Link to="/resume">resume</Link>
+				<Link to="/projects">work</Link>
+				<a href="#">blog</a>
 			</div>
 		</header>
 	);
