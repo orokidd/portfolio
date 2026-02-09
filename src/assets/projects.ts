@@ -186,7 +186,7 @@ export const projects:Projects[] = [
   {
     id: 15,
     name: "File Uploader",
-    tech: ["Node", "Express", "PostgreSQL", "EJS", "Prisma", "Supabase", "Passport"],
+    tech: ["Express", "PostgreSQL", "EJS", "Prisma", "Supabase", "Passport"],
     links: {
       demo: "https://orokidd-file-uploader.onrender.com/",
       github: "https://github.com/orokidd/file-uploader",

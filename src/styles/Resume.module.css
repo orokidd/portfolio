@@ -1,0 +1,76 @@
+li {
+    list-style-type: disc;
+}
+
+ul {
+    padding-left: 2rem;
+}
+
+.resume {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 200;
+    /* border: 1px solid var(--gray); */
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;  
+    padding: 3rem;
+}
+
+.fullname, .sectionName {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.mainResume {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.work {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.workPlace {
+    display: flex;
+    justify-content: space-between;
+}
+
+.companyName, .schoolName, .skillsHeader {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.companyPosition {
+    font-weight: 400;
+}
+
+.date {
+    display: flex;
+    gap: 4px;
+}
+
+.education {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
