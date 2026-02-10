@@ -6,24 +6,50 @@
     max-width: 800px;
     min-height: 90vh;
     margin: 0 auto;
-}
-
-.details {
-
+    
 }
 
 .portraitImage {
+    opacity: 0;
     width: 200px;
     aspect-ratio: 1/1;
     object-fit: cover;
+    animation: scale 0.5s ease forwards;
+    animation-delay: 0.2s;
     /* border-radius: 10px; */
 }
 
 .heading {
-    color: var(--fg)
+    opacity: 0;
+    color: var(--fg);
+    animation: fadeInBottom 0.5s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .paragraph {
+    opacity: 0;
     color: var(--gray);
     word-spacing: 1px;
+    animation: fadeInBottom 0.5s ease forwards;
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeInBottom {
+	from {
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0.75);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
