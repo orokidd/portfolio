@@ -17,3 +17,11 @@
     align-items: center;
     gap: 18px;
 }
+
+.navLink:hover {
+	text-decoration: underline;
+}
+
+.active {
+	text-decoration: underline;
+}
