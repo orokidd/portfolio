@@ -8,16 +8,16 @@ export default function Resume() {
 
 	return (
 		<div className={styles.resume}>
-			<header className={styles.header}>
-				<p className={styles.fullname}>MUHAMMAD HUDAA SABRIE</p>
-				<div className={styles.personal}>
-					<p>hudaasabrie.vercel.app</p>
-					<p>hudasabrie@gmail.com</p>
-					<p>0895-3397-41303</p>
-				</div>
-			</header>
-
 			<main className={styles.mainResume}>
+				<header className={styles.header}>
+					<p className={styles.fullname}>MUHAMMAD HUDAA SABRIE</p>
+					<div className={styles.personal}>
+						<p>hudaasabrie.vercel.app</p>
+						<p>hudasabrie@gmail.com</p>
+						<p>0895-3397-41303</p>
+					</div>
+				</header>
+
 				<div className={styles.section}>
 					<div className={styles.sectionName}>Experience</div>
 
@@ -75,32 +75,32 @@ export default function Resume() {
 
 					<div className={styles.skills}>
 						<div className="languages">
-                            <p className={styles.skillsHeader}>Languages</p>
-                            {skills.languages.map((lang) => (
-                                <p>{lang}</p>
-                            ))}
-                        </div>
+							<p className={styles.skillsHeader}>Languages</p>
+							{skills.languages.map((lang) => (
+								<p>{lang}</p>
+							))}
+						</div>
 
-                        <div className="framewroks">
-                            <p className={styles.skillsHeader}>Frameworks</p>
-                            {skills.frameworks.map((framework) => (
-                                <p>{framework}</p>
-                            ))}
-                        </div>
+						<div className="framewroks">
+							<p className={styles.skillsHeader}>Frameworks</p>
+							{skills.frameworks.map((framework) => (
+								<p>{framework}</p>
+							))}
+						</div>
 
-                        <div className="database">
-                            <p className={styles.skillsHeader}>Database</p>
-                            {skills.database.map((db) => (
-                                <p>{db}</p>
-                            ))}
-                        </div>
+						<div className="database">
+							<p className={styles.skillsHeader}>Database</p>
+							{skills.database.map((db) => (
+								<p>{db}</p>
+							))}
+						</div>
 
-                        <div className="others">
-                            <p className={styles.skillsHeader}>Others</p>
-                            {skills.others.map((other) => (
-                                <p>{other}</p>
-                            ))}
-                        </div>
+						<div className="others">
+							<p className={styles.skillsHeader}>Others</p>
+							{skills.others.map((other) => (
+								<p>{other}</p>
+							))}
+						</div>
 					</div>
 				</div>
 			</main>
