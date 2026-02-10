@@ -8,8 +8,10 @@ export default function Hero() {
 			<div className={styles.details}>
 				<h1 className={styles.heading}>I'm Hudaa -- a full stack web developer.</h1>
 				<p className={styles.paragraph}>
-					I see myself as a creative that likes making things happen. I started as a visual designer making websites and handling creative direction for businesses and companies, but now I do a mix of
-					everything from production to advising companies. I also make YouTube videos on tech, business and finance...
+					I am a self-taught full-stack developer with proficiency in JavaScript, TypeScript,
+					React, Node.js, Express.js, and relational databases such as PostgreSQL and MySQL.
+					With these technologies I am able to build a fully responsive and user intuitive full-stack web applications.
+					I am eager to apply what I've learned in real-world projects and willing to learn more as i go.
 				</p>
 			</div>
 		</div>

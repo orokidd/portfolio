@@ -3,8 +3,8 @@ import styles from '../styles/Projects.module.css'
 
 export default function AllProjectsButton() {
 	return (
-		<div className={styles.showButton}>
-			<Link to="/projects" style={{ color: "white" }}>
+		<div className={styles.allProjectsLinkContainer}>
+			<Link to="/projects" style={{ color: "white" }} className={styles.allProjectsLink}>
 				All Projects
 			</Link>
 		</div>
