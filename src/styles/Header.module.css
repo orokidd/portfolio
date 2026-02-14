@@ -4,7 +4,6 @@
 	align-items: center;
 	gap: 12px;
 	margin-bottom: 20px;
-	animation: fadeIn 0.5s ease;
 }
 
 .siteIcon {
@@ -40,15 +39,4 @@
 .navLink:hover::after,
 .navLink.active::after {
 	transform: scaleX(1);
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(-10px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
 }

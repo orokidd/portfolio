@@ -21,7 +21,7 @@ export default function Header() {
 			<div className={styles.navigations}>
 				<Link to="/resume" id="resume" className={`${styles.navLink} ${resumeActive}`} onClick={changePage}>resume</Link>
 				<Link to="/projects" id="work" className={`${styles.navLink} ${workActive}`} onClick={changePage}>work</Link>
-				<a href="#" className={`${styles.navLink}`}>blog</a>
+				<a href="https://orokidd-blog-client.vercel.app/" className={`${styles.navLink}`}>blog</a>
 			</div>
 		</header>
 	);
