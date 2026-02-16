@@ -49,13 +49,6 @@ export default function Hero() {
 					<h1>WEB</h1>
 					<h1>DEVELOPER</h1>
 				</div>
-
-				{/* <p className={styles.paragraph}>
-					I am a self-taught full-stack developer with proficiency in JavaScript, TypeScript,
-					React, Node.js, Express.js, and relational databases such as PostgreSQL and MySQL.
-					With these technologies I am able to build a fully responsive and user intuitive full-stack web applications.
-					I am eager to apply what I've learned in real-world projects and willing to learn more as i go.
-				</p> */}
 			</div>
 		</div>
 	);

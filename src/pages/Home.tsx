@@ -4,6 +4,7 @@ import Projects from "../components/Projects";
 import TechStack from "../components/TechStack";
 import Footer from "../components/Footer";
 import AllProjectsButton from "../components/AllProjectsButton";
+import About from "../components/About";
 import { projects } from "../assets/projects";
 import "../App.css";
 
@@ -15,6 +16,7 @@ function Home() {
         <>
             <Header />
             <Hero />
+            <About />
             <Projects projects={limitedProject} />
             <AllProjectsButton />
             <TechStack />
