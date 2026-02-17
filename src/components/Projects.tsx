@@ -1,15 +1,45 @@
 import styles from "../styles/Projects.module.css";
 import { DemoIcon, GithubIcon } from "./Icons";
+import gsap from "gsap";
 import type { Projects } from "../assets/projects";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+import { useRef } from "react";
 
 type ProjectsProps = {
 	projects: Projects[];
 };
 
+gsap.registerPlugin(ScrollTrigger) 
+
 export default function Projects({ projects }: ProjectsProps) {
+	const headingRef = useRef<HTMLDivElement>(null)
+
+	useGSAP(() => {
+		if (!headingRef.current) return;
+
+		const heading = headingRef.current
+		const paragraphs = headingRef.current.children
+
+		gsap.from(paragraphs, {
+			y: 200,
+  			stagger: .2,
+  			duration: 1,
+  			ease: "power3.out",
+			scrollTrigger: {
+				trigger: heading,
+				start: 'top 90%'
+			},
+		});
+	}, []);
+
 	return (
 		<>
-			<h2 className={styles.projectHeading}>PROJECTS</h2>
+			<div className={styles.projectHeading} ref={headingRef}>
+				<p>PROJECTS</p>
+				<p>'25</p>
+			</div>
+
 			<div className={styles.projects}>
 				{projects.map((project) => (
 					<div className={styles.project} key={project.id}>

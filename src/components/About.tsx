@@ -27,13 +27,15 @@ export default function About() {
             scrollTrigger: {
                 trigger: paragraphRef.current,
                 start: 'top 80%',
-                end: 'center 30%',
+                end: 'center 40%',
                 scrub: 1,
             },
 			y: 100, // animate from 100px below
 			autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
 			stagger: 0.05, // 0.05 seconds between each
 		});
+
+        return () => split.revert();
 	}, []);
 
 	return (

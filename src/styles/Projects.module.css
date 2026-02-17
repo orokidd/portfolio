@@ -1,6 +1,13 @@
 .projectHeading {
-	text-align: center;
-	margin-bottom: 40px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 12rem;
+	margin: 0;
+	font-weight: 600;
+}
+
+.projectHeading {
+  overflow: hidden;
 }
 
 .projects {
@@ -16,10 +23,6 @@
 	transition: all 0.3s ease;
 	background-color: rgb(240, 240, 240);
 	border-radius: 12px;
-}
-
-.project:hover {
-	/* background-color: var(--bg-alt); */
 }
 
 .projectImage {
