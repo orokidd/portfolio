@@ -20,7 +20,6 @@
 
 .project {
 	padding: 20px;
-	transition: all 0.3s ease;
 	background-color: rgb(240, 240, 240);
 	border-radius: 12px;
 }
@@ -52,10 +51,6 @@
 .projectTitle {
 	font-size: 1.2rem;
 	font-weight: 500;
-}
-
-.project:hover .projectDetails {
-	color: var(--bg-alt);
 }
 
 .links {

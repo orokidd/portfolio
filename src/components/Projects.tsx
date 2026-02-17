@@ -14,9 +14,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Projects({ projects }: ProjectsProps) {
 	const headingRef = useRef<HTMLDivElement>(null)
+	const projectsRef = useRef<HTMLDivElement>(null)
 
 	useGSAP(() => {
-		if (!headingRef.current) return;
+		if (!headingRef.current || !projectsRef.current) return;
 
 		const heading = headingRef.current
 		const paragraphs = headingRef.current.children
@@ -28,9 +29,23 @@ export default function Projects({ projects }: ProjectsProps) {
   			ease: "power3.out",
 			scrollTrigger: {
 				trigger: heading,
-				start: 'top 90%'
+				start: 'top 85%'
 			},
 		});
+
+		const projects = projectsRef.current.children
+
+		gsap.from(projects, {
+			scale: 0.1,
+  			duration: 1.4,
+			stagger: 0.1,
+			y: 400,
+  			ease: "power3.out",
+			scrollTrigger: {
+				trigger: projectsRef.current,
+				start: 'top 85%',
+			}
+		})
 	}, []);
 
 	return (
@@ -40,7 +55,7 @@ export default function Projects({ projects }: ProjectsProps) {
 				<p>'25</p>
 			</div>
 
-			<div className={styles.projects}>
+			<div className={styles.projects} ref={projectsRef}>
 				{projects.map((project) => (
 					<div className={styles.project} key={project.id}>
 						<img src={project.image} alt="" className={styles.projectImage} />
