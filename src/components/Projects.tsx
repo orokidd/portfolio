@@ -3,49 +3,60 @@ import { DemoIcon, GithubIcon } from "./Icons";
 import gsap from "gsap";
 import type { Projects } from "../assets/projects";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useGSAP } from '@gsap/react';
+import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 type ProjectsProps = {
 	projects: Projects[];
 };
 
-gsap.registerPlugin(ScrollTrigger) 
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects({ projects }: ProjectsProps) {
-	const headingRef = useRef<HTMLDivElement>(null)
-	const projectsRef = useRef<HTMLDivElement>(null)
+	const isMedium = useMediaQuery({
+		query: "(max-width: 1900px)",
+	});
+	const isSmall = useMediaQuery({
+		query: "(max-width: 1280px)",
+	});
+
+	const limitedProjects = projects.slice(0, isSmall ? 2 : isMedium ? 4 : projects.length);
+
+	const headingRef = useRef<HTMLDivElement>(null);
+	const projectsRef = useRef<HTMLDivElement>(null);
 
 	useGSAP(() => {
 		if (!headingRef.current || !projectsRef.current) return;
 
-		const heading = headingRef.current
-		const paragraphs = headingRef.current.children
+		const heading = headingRef.current;
+		const paragraphs = headingRef.current.children;
 
 		gsap.from(paragraphs, {
 			y: 200,
-  			stagger: .2,
-  			duration: 1,
-  			ease: "power3.out",
+			stagger: 0.2,
+			duration: 1,
+			ease: "power3.out",
 			scrollTrigger: {
 				trigger: heading,
-				start: 'top 85%'
+				start: "top 85%",
+				toggleActions: 'play none none reset' // reset when scroll back up past the trigger
 			},
 		});
 
-		const projects = projectsRef.current.children
+		const projects = projectsRef.current.children;
 
 		gsap.from(projects, {
 			scale: 0.1,
-  			duration: 1.4,
+			duration: 1.4,
 			stagger: 0.1,
 			y: 400,
-  			ease: "power3.out",
+			ease: "power3.out",
 			scrollTrigger: {
 				trigger: projectsRef.current,
-				start: 'top 85%',
-			}
-		})
+				start: "top 85%",
+			},
+		});
 	}, []);
 
 	return (
@@ -56,7 +67,7 @@ export default function Projects({ projects }: ProjectsProps) {
 			</div>
 
 			<div className={styles.projects} ref={projectsRef}>
-				{projects.map((project) => (
+				{limitedProjects.map((project) => (
 					<div className={styles.project} key={project.id}>
 						<img src={project.image} alt="" className={styles.projectImage} />
 

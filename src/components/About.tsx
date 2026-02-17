@@ -42,7 +42,7 @@ export default function About() {
 		<div className={styles.container}>
 			<h1 className={styles.aboutHeader}>MYSELF</h1>
 			<p className={styles.paragraph} ref={paragraphRef}>
-				Self-taught full-stack developer with proficiency in JavaScript, TypeScript, React, Node, Express, and relational databases such as PostgreSQL and MySQL. I am able to build a fully responsive
+				Self-taught full-stack developer with proficiency in JavaScript, TypeScript, React, Node, Express, and relational databases such as PostgreSQL and MySQL. Able to build a fully responsive
 				and user intuitive full-stack web applications.
 			</p>
 		</div>

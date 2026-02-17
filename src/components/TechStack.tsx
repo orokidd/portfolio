@@ -4,7 +4,7 @@ import { JavaScript, TypeScript, Node, React, Next, Express, Postgre, Prisma, Ta
 export default function TechStack() {
 	return (
 		<>
-			<h2 className={styles.heading}>TECHNOLOGIES</h2>
+			<h2 className={styles.heading}>MODERN TECH STACK</h2>
 
 			<div className={styles.tech}>
 				<div className={styles.topGrid}>

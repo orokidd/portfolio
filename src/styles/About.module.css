@@ -1,15 +1,21 @@
 .container {
-    padding-bottom: 140px;
+	padding-bottom: 140px;
 }
 
 .aboutHeader {
-    margin-top: 50px;
-    font-size: 1.2em;
+	margin-top: 50px;
+	font-size: 1.2em;
 }
 
 .paragraph {
-    margin-top: 20px;
-    font-size: 4rem;
-    font-weight: 600;
-    max-width: 1400px;
+	margin-top: 20px;
+	font-size: 4rem;
+	font-weight: 600;
+	max-width: 1400px;
+}
+
+@media screen and (max-width: 600px) {
+	.paragraph {
+		font-size: 2rem;
+	}
 }
