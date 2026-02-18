@@ -5,6 +5,30 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { JavaScript, TypeScript, Node, React, Next, Express, Postgre, Prisma, Tailwind, Jest, Git, Supabase } from "./Icons";
 
+function createSplitText(domElement: HTMLHeadingElement) {
+	return SplitText.create(domElement, {
+		type: "chars",
+		smartWrap: true,
+	});
+}
+
+const textOption = {
+	visible: {
+		yPercent: 100,
+		stagger: {
+			each: 0.1,
+			from: 3,
+		},
+	},
+	hidden: {
+		yPercent: -100,
+		stagger: {
+			each: 0.1,
+			from: 3,
+		},
+	},
+};
+
 export default function TechStack() {
 	const modernText = useRef<HTMLHeadingElement>(null);
 	const modernTextHidden = useRef<HTMLHeadingElement>(null);
@@ -13,91 +37,27 @@ export default function TechStack() {
 	const techStackTextHidden = useRef<HTMLHeadingElement>(null);
 
 	useGSAP(() => {
-		const splitText = SplitText.create(modernText.current, {
-			type: "chars",
-			smartWrap: true,
-		});
+		if (!modernText.current || !modernTextHidden.current || !techStackText.current || !techStackTextHidden.current) return;
 
-		const splitTextHidden = SplitText.create(modernTextHidden.current, {
-			type: "chars",
-			smartWrap: true,
-		});
-
-		const splitTechText = SplitText.create(techStackText.current, {
-			type: "chars",
-			smartWrap: true,
-		});
-
-		const splitTechTextHidden = SplitText.create(techStackTextHidden.current, {
-			type: "chars",
-			smartWrap: true,
-		});
+		const splitText = createSplitText(modernText.current);
+		const splitTextHidden = createSplitText(modernTextHidden.current);
+		const splitTechText = createSplitText(techStackText.current);
+		const splitTechTextHidden = createSplitText(techStackTextHidden.current);
 
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: modernText.current,
 				start: "top 70%",
-				end: "top 25%",
-				scrub: 1,
-			},
-		});
-
-		const timelineBottom = gsap.timeline({
-			scrollTrigger: {
-				trigger: modernText.current,
-				start: "top 70%",
-				end: "bottom 15%",
+				end: "bottom 20%",
 				scrub: 1,
 			},
 		});
 
 		timeline
-			.to(
-				splitText.chars,
-				{
-					yPercent: 100,
-					stagger: {
-						each: 0.1,
-						from: 3,
-					},
-				},
-				0,
-			)
-			.from(
-				splitTextHidden.chars,
-				{
-					yPercent: -100,
-					stagger: {
-						each: 0.1,
-						from: 3,
-					},
-				},
-				0,
-			);
-
-		timelineBottom
-			.to(
-				splitTechText.chars,
-				{
-					yPercent: 100,
-					stagger: {
-						each: 0.1,
-						from: 3,
-					},
-				},
-				1,
-			)
-			.from(
-				splitTechTextHidden.chars,
-				{
-					yPercent: -100,
-					stagger: {
-						each: 0.1,
-						from: 3,
-					},
-				},
-				1,
-			);
+			.to(splitText.chars, textOption.visible, 0)
+			.from(splitTextHidden.chars, textOption.hidden, 0)
+			.to(splitTechText.chars, textOption.visible, 1)
+			.from(splitTechTextHidden.chars, textOption.hidden, 1);
 	});
 
 	return (
