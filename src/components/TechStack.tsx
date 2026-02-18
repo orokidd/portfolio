@@ -9,6 +9,9 @@ export default function TechStack() {
 	const modernText = useRef<HTMLHeadingElement>(null);
 	const modernTextHidden = useRef<HTMLHeadingElement>(null);
 
+	const techStackText = useRef<HTMLHeadingElement>(null);
+	const techStackTextHidden = useRef<HTMLHeadingElement>(null);
+
 	useGSAP(() => {
 		const splitText = SplitText.create(modernText.current, {
 			type: "chars",
@@ -16,6 +19,16 @@ export default function TechStack() {
 		});
 
 		const splitTextHidden = SplitText.create(modernTextHidden.current, {
+			type: "chars",
+			smartWrap: true,
+		});
+
+		const splitTechText = SplitText.create(techStackText.current, {
+			type: "chars",
+			smartWrap: true,
+		});
+
+		const splitTechTextHidden = SplitText.create(techStackTextHidden.current, {
 			type: "chars",
 			smartWrap: true,
 		});
@@ -29,35 +42,84 @@ export default function TechStack() {
 			},
 		});
 
-		timeline
-  			.to(splitText.chars, {
-    			yPercent: 100,
-    			stagger: {
-					each: 0.1,
-					from: 3
-				}
-  			}, 0)
-  			.from(splitTextHidden.chars, {
-    			yPercent: -100,
-    			stagger: {
-					each: 0.1,
-					from: 3
-				}
-  		}, 0);
+		const timelineBottom = gsap.timeline({
+			scrollTrigger: {
+				trigger: modernText.current,
+				start: "top 70%",
+				end: "bottom 15%",
+				scrub: 1,
+			},
+		});
 
+		timeline
+			.to(
+				splitText.chars,
+				{
+					yPercent: 100,
+					stagger: {
+						each: 0.1,
+						from: 3,
+					},
+				},
+				0,
+			)
+			.from(
+				splitTextHidden.chars,
+				{
+					yPercent: -100,
+					stagger: {
+						each: 0.1,
+						from: 3,
+					},
+				},
+				0,
+			);
+
+		timelineBottom
+			.to(
+				splitTechText.chars,
+				{
+					yPercent: 100,
+					stagger: {
+						each: 0.1,
+						from: 3,
+					},
+				},
+				1,
+			)
+			.from(
+				splitTechTextHidden.chars,
+				{
+					yPercent: -100,
+					stagger: {
+						each: 0.1,
+						from: 3,
+					},
+				},
+				1,
+			);
 	});
 
 	return (
 		<>
 			<div className={styles.heading}>
-				<h2 className={styles.headingTextHidden} ref={modernTextHidden}>
-					MODERN
-				</h2>
-				<h2 className={styles.headingText} ref={modernText}>
-					MODERN
-				</h2>
+				<div className={styles.textModern}>
+					<h2 className={styles.headingTextHidden} ref={modernTextHidden}>
+						MODERN
+					</h2>
+					<h2 className={styles.headingText} ref={modernText}>
+						MODERN
+					</h2>
+				</div>
 
-				<h2 className={styles.headingText}>TECH STACK</h2>
+				<div className={styles.textTechStack}>
+					<h2 className={styles.headingTextHidden} ref={techStackTextHidden}>
+						TECH STACK
+					</h2>
+					<h2 className={styles.headingText} ref={techStackText}>
+						TECH STACK
+					</h2>
+				</div>
 			</div>
 
 			<div className={styles.tech}>
