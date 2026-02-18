@@ -1,10 +1,64 @@
 import styles from "../styles/Tech.module.css";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
 import { JavaScript, TypeScript, Node, React, Next, Express, Postgre, Prisma, Tailwind, Jest, Git, Supabase } from "./Icons";
 
 export default function TechStack() {
+	const modernText = useRef<HTMLHeadingElement>(null);
+	const modernTextHidden = useRef<HTMLHeadingElement>(null);
+
+	useGSAP(() => {
+		const splitText = SplitText.create(modernText.current, {
+			type: "chars",
+			smartWrap: true,
+		});
+
+		const splitTextHidden = SplitText.create(modernTextHidden.current, {
+			type: "chars",
+			smartWrap: true,
+		});
+
+		const timeline = gsap.timeline({
+			scrollTrigger: {
+				trigger: modernText.current,
+				start: "top 70%",
+				end: "top 25%",
+				scrub: 1,
+			},
+		});
+
+		timeline
+  			.to(splitText.chars, {
+    			yPercent: 100,
+    			stagger: {
+					each: 0.1,
+					from: 3
+				}
+  			}, 0)
+  			.from(splitTextHidden.chars, {
+    			yPercent: -100,
+    			stagger: {
+					each: 0.1,
+					from: 3
+				}
+  		}, 0);
+
+	});
+
 	return (
 		<>
-			<h2 className={styles.heading}>MODERN TECH STACK</h2>
+			<div className={styles.heading}>
+				<h2 className={styles.headingTextHidden} ref={modernTextHidden}>
+					MODERN
+				</h2>
+				<h2 className={styles.headingText} ref={modernText}>
+					MODERN
+				</h2>
+
+				<h2 className={styles.headingText}>TECH STACK</h2>
+			</div>
 
 			<div className={styles.tech}>
 				<div className={styles.topGrid}>
@@ -46,9 +100,9 @@ export default function TechStack() {
 						<Tailwind size={40} />
 					</div>
 
-                    <div className={styles.icon}>
-                        <Supabase size={40} />
-                    </div>
+					<div className={styles.icon}>
+						<Supabase size={40} />
+					</div>
 
 					<div className={styles.icon}>
 						<Jest size={40} />
@@ -97,9 +151,9 @@ export default function TechStack() {
 					<Tailwind size={40} />
 				</div>
 
-                <div className={`${styles.icon}`}>
-                        <Supabase size={40} />
-                    </div>
+				<div className={`${styles.icon}`}>
+					<Supabase size={40} />
+				</div>
 
 				<div className={`${styles.icon} ${styles.rightBorder}`}>
 					<Jest size={40} />

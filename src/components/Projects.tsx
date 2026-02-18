@@ -2,7 +2,6 @@ import styles from "../styles/Projects.module.css";
 import { DemoIcon, GithubIcon } from "./Icons";
 import gsap from "gsap";
 import type { Projects } from "../assets/projects";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
@@ -10,8 +9,6 @@ import { useMediaQuery } from "react-responsive";
 type ProjectsProps = {
 	projects: Projects[];
 };
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects({ projects }: ProjectsProps) {
 	const isMedium = useMediaQuery({
@@ -40,7 +37,6 @@ export default function Projects({ projects }: ProjectsProps) {
 			scrollTrigger: {
 				trigger: heading,
 				start: "top 85%",
-				toggleActions: 'play none none reset' // reset when scroll back up past the trigger
 			},
 		});
 

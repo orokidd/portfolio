@@ -2,10 +2,6 @@ import styles from "../styles/About.module.css";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-import ScrollTrigger from "gsap/src/ScrollTrigger";
-
-gsap.registerPlugin(SplitText) 
-gsap.registerPlugin(ScrollTrigger) 
 
 export default function About() {
 	const paragraphRef = useRef<HTMLParagraphElement>(null);

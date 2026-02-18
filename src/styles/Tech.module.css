@@ -1,7 +1,31 @@
+h2 {
+	padding: 0;
+	margin: 0;
+}
+
 .heading {
+	position: relative;
 	text-align: center;
+	margin: 0 auto;
 	margin-bottom: 40px;
 	margin-top: 180px;
+	max-width: 1100px;
+	
+}
+
+.headingText,
+.headingTextHidden {
+	font-size: 10rem;
+	line-height: 1;
+	overflow: hidden;
+}
+
+.headingTextHidden {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
 }
 
 .topGrid {
