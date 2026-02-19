@@ -37,6 +37,7 @@ export default function Projects({ projects }: ProjectsProps) {
 			scrollTrigger: {
 				trigger: heading,
 				start: "top 85%",
+				scrub: 1,
 			},
 		});
 

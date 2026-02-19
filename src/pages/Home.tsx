@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
+import TechStackHeading from "../components/TechStackHeading";
 import TechStack from "../components/TechStack";
 import Footer from "../components/Footer";
 import AllProjectsButton from "../components/AllProjectsButton";
@@ -19,6 +20,7 @@ function Home() {
             <About />
             <Projects projects={limitedProject} />
             <AllProjectsButton />
+            <TechStackHeading />
             <TechStack />
             <Footer />
         </>

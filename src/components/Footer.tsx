@@ -3,7 +3,7 @@ import styles from "../styles/Footer.module.css";
 export default function Footer() {
 	return (
         <div className={styles.contact}>
-            <p className={styles.orokidd}>orokidd</p>
+			<p className={styles.orokidd}>orokidd</p>
 			<div className={styles.links}>
 					<a href="#" className={styles.work}>Work</a>
 					<a href="#" className={styles.lab}>Lab</a>

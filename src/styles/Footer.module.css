@@ -32,18 +32,18 @@
 } */
 
 .contact {
-	position: relative;
 	/* margin-bottom: 40px; */
+	position: relative;
 	margin-top: 180px;
 }
 
 .orokidd {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 14rem;
+	font-size: 18rem;
 	color: var(--fg);
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 	z-index: 0;
 	text-align: center;
 	pointer-events: none;
@@ -72,7 +72,7 @@
 	padding: 16px;
 	transition: all 0.3s ease;
 	border-radius: 8px;
-	backdrop-filter: blur(4px);
+	backdrop-filter: blur(6px);
 }
 
 .work:hover,
@@ -81,7 +81,7 @@
 .insta:hover,
 .linkedIn:hover,
 .lab:hover {
-	backdrop-filter: blur(6px);
+	backdrop-filter: blur(8px);
 }
 
 .work {
