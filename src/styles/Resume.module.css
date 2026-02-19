@@ -11,12 +11,15 @@ ul {
     margin: 0 auto;
     font-size: 1rem;
     font-weight: 200;
-    /* border: 1px solid var(--gray); */
+    border: 1px solid var(--dark-gray);
+    border-radius: 12px
 }
 
 .header {
-    display: grid;
-    grid-template-columns: 1fr 2fr;  
+    /* display: grid;
+    grid-template-columns: 1fr 2fr;   */
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 2rem;
     padding: 3rem 0;
 }
@@ -24,6 +27,7 @@ ul {
 .fullname, .sectionName {
     font-size: 1.4rem;
     text-transform: uppercase;
+    font-weight: 200;
 }
 
 .mainResume {
@@ -32,6 +36,10 @@ ul {
     gap: 30px;
     margin: 0 auto;
     padding: 3rem;
+}
+
+.personal {
+    text-align: end;
 }
 
 .section {
@@ -80,13 +88,21 @@ ul {
 }
 
 @media screen and (max-width:780px) {
+    .resume {
+        border: none;
+    }
     .mainResume {
         padding: 1rem;
     }
     .header {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
+        flex-direction: column;
+        /* gap: 20px; */
         padding-bottom: 0;
     }
+    .personal {
+    text-align: start;
+}
     .section {
         grid-template-columns: 1fr;
     }

@@ -71,6 +71,6 @@ export const resume:Resume = {
         languages: ["JavaScript", "TypeScript", "Node"],
         frameworks: ["React", "Next JS", "Express"],
         database: ["PostgreSQL", "MySQL", "PrismaORM"],
-        others: ["CSS", "Tailwind CSS", "EJS", "Supabase", "Webpack", "Jest", "Git", "Linux", "Photoshop", "Canva"]
+        others: ["GSAP", "Tailwind CSS", "EJS", "Supabase", "Webpack", "Jest", "Git", "Linux", "Photoshop", "Canva"]
     }
 }

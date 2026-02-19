@@ -25,10 +25,12 @@ export default function Hero() {
 	function getPosition(cursorPosition: number, imgWidth: number, heroWidth: number) {
 		const max = heroWidth - imgWidth;
 
+		// prevent image from overflow to the right of container
 		if (cursorPosition > max) {
 			return max
 		}
 
+		// same thing but to the left
 		if (cursorPosition < 0) {
     		return 0;
   		}

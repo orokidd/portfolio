@@ -1,20 +1,34 @@
 import styles from "../styles/Resume.module.css";
 import { resume } from "../assets/resume";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import gsap from "gsap";
 
 export default function Resume() {
 	const experience = resume.experience;
 	const education = resume.education;
 	const skills = resume.skills;
 
+	const resumeRef = useRef<HTMLDivElement | null>(null)
+
+	useGSAP(() => {
+		gsap.from(resumeRef.current, {
+			opacity: 0,
+			y: -60,
+			duration: 1,
+			delay: 0.2,
+			ease: "power3.out"
+		})
+	})
+
 	return (
-		<div className={styles.resume}>
+		<div className={styles.resume} ref={resumeRef}>
 			<main className={styles.mainResume}>
 				<header className={styles.header}>
 					<p className={styles.fullname}>MUHAMMAD HUDAA SABRIE</p>
 					<div className={styles.personal}>
-						<p>hudaasabrie.vercel.app</p>
 						<p>hudasabrie@gmail.com</p>
-						<p>0895-3397-41303</p>
+						<p>(+62) 895339741303</p>
 					</div>
 				</header>
 
