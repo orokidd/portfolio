@@ -1,2 +1,1 @@
-- kalo di mobile, show 2/3 project aja
-- text kegedean di mobile
+- tests white mode make new branch
