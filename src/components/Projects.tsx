@@ -32,11 +32,11 @@ export default function Projects({ projects }: ProjectsProps) {
 		gsap.from(paragraphs, {
 			y: 200,
 			stagger: 0.2,
-			duration: 1,
 			ease: "power3.out",
 			scrollTrigger: {
 				trigger: heading,
 				start: "top 85%",
+				end: "top 15%",
 				scrub: 1,
 			},
 		});

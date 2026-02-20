@@ -1,5 +1,5 @@
 .hero {
-    /* position: relative; */
+	/* position: relative; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -11,15 +11,15 @@
 }
 
 .portraitImage {
-    /* position: absolute; */
+	/* position: absolute; */
 	opacity: 1;
 	width: 200px;
 	aspect-ratio: 1/1;
 	object-fit: cover;
-    pointer-events: none;
-    z-index: 2;
-    /* top: 140px; */
-    border-radius: 8px;
+	pointer-events: none;
+	z-index: 2;
+	/* top: 140px; */
+	border-radius: 8px;
 
 	/* animation: scale 0.5s ease forwards;
 	animation-delay: 0.2s; */
@@ -30,7 +30,7 @@
 	display: flex;
 	justify-content: space-between;
 	opacity: 0;
-    z-index: 0;
+	z-index: 0;
 
 	animation: fadeInBottom 0.5s ease forwards;
 	animation-delay: 0.7s;
@@ -38,7 +38,7 @@
 
 .smallHero p {
 	color: var(--fg);
-    font-size: 1.2rem;
+	font-size: 1.2rem;
 }
 
 .bigHero {
@@ -46,7 +46,7 @@
 	justify-content: space-between;
 	opacity: 0;
 	padding: 0;
-    z-index: 0;
+	z-index: 0;
 
 	animation: fadeInBottom 0.5s ease forwards;
 	animation-delay: 0.5s;
@@ -54,7 +54,9 @@
 
 .bigHero h1 {
 	color: var(--fg);
-	font-size: 14rem;
+	/* font-size: 14rem; */
+	/* font-size: clamp(3rem, 11vw, 14rem); */
+	font-size: 11.4vw;
 	line-height: 1;
 }
 
@@ -75,5 +77,26 @@
 	to {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.bigHero {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.bigHero h1 {
+		font-size: 8rem;
+		/* font-size: clamp(3rem, 11vw, 14rem); */
+		/* font-size: 11.4vw; */
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.bigHero h1 {
+		/* font-size: 6rem; */
+		font-size: clamp(3rem, 15vw, 14rem);
+		/* font-size: 11.4vw; */
 	}
 }

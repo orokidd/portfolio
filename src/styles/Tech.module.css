@@ -119,22 +119,38 @@ h2 {
 		padding: 80px 0;
 	}
 }
-/* @media screen and (max-width: 660px) {
-	.topGrid {
-		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-	}
 
-	.bottomGrid {
-		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+@media screen and (max-width: 1080px) {
+	.headingText,
+	.headingTextHidden {
+		font-size: 8rem;
 	}
 }
 
-@media screen and (max-width: 460px) {
-	.topGrid {
-		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+@media screen and (max-width: 900px) {
+	.headingText,
+	.headingTextHidden {
+		font-size: 6rem;
 	}
+}
 
-	.bottomGrid {
-		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+@media screen and (max-width: 680px) {
+	.headingText,
+	.headingTextHidden {
+		font-size: 4rem;
 	}
-} */
+}
+
+@media screen and (max-width: 480px) {
+	.headingText,
+	.headingTextHidden {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.headingText,
+	.headingTextHidden {
+		font-size: 3rem;
+	}
+}

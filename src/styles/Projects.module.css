@@ -7,7 +7,7 @@
 }
 
 .projectHeading {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .projects {
@@ -118,7 +118,15 @@
 
 @keyframes rotateDikit {
 	55% {
-		transform:translateY(-5px);
+		transform: translateY(-5px);
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.projectHeading {
+		/* font-size: 12rem; */
+		font-size: clamp(2rem, 12vw, 12rem);
+		margin-bottom: 10px;
 	}
 }
 

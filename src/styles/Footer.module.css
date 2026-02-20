@@ -114,6 +114,12 @@
 	grid-row: 2 / 4;
 }
 
+@media screen and (max-width: 1040px) {
+	.orokidd {
+		font-size: 12rem;
+	}
+}
+
 @media screen and (max-width: 800px) {
 	.orokidd {
 		font-size: 8rem;
