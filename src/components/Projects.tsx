@@ -4,22 +4,12 @@ import gsap from "gsap";
 import type { Projects } from "../assets/projects";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import { useMediaQuery } from "react-responsive";
 
 type ProjectsProps = {
 	projects: Projects[];
 };
 
 export default function Projects({ projects }: ProjectsProps) {
-	const isMedium = useMediaQuery({
-		query: "(max-width: 1900px)",
-	});
-	const isSmall = useMediaQuery({
-		query: "(max-width: 1280px)",
-	});
-
-	const limitedProjects = projects.slice(0, isSmall ? 2 : isMedium ? 4 : projects.length);
-
 	const headingRef = useRef<HTMLDivElement>(null);
 	const projectsRef = useRef<HTMLDivElement>(null);
 
@@ -43,17 +33,23 @@ export default function Projects({ projects }: ProjectsProps) {
 
 		const projects = projectsRef.current.children;
 
-		gsap.from(projects, {
-			scale: 0.1,
-			duration: 1.4,
-			stagger: 0.1,
-			y: 400,
-			ease: "power3.out",
-			scrollTrigger: {
-				trigger: projectsRef.current,
-				start: "top 85%",
+		gsap.fromTo(projects,
+			{
+				scale: 0,
+				y: 200,
 			},
-		});
+			{
+				scale: 1,
+				y: 0,
+				duration: 1,
+				stagger: 0.1,
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: projectsRef.current,
+					start: "top 85%",
+				},
+			},
+		);
 	}, []);
 
 	return (
@@ -64,7 +60,7 @@ export default function Projects({ projects }: ProjectsProps) {
 			</div>
 
 			<div className={styles.projects} ref={projectsRef}>
-				{limitedProjects.map((project) => (
+				{projects.map((project) => (
 					<div className={styles.project} key={project.id}>
 						<img src={project.image} alt="" className={styles.projectImage} />
 
@@ -82,8 +78,10 @@ export default function Projects({ projects }: ProjectsProps) {
 						</div>
 
 						<div className={styles.techStack}>
-							{project.tech.map((stack) => (
-								<div className={styles.stackName}>{stack}</div>
+							{project.tech.map((stack, index) => (
+								<div className={styles.stackName} key={index}>
+									{stack}
+								</div>
 							))}
 						</div>
 					</div>

@@ -8,23 +8,32 @@ import AllProjectsButton from "../components/AllProjectsButton";
 import About from "../components/About";
 import { projects } from "../assets/projects";
 import "../App.css";
+import { useMediaQuery } from "react-responsive";
 
 function Home() {
-    const sortedProject = [...projects].reverse();
-	const limitedProject = sortedProject.slice(0, 6);
+	const reversedProjects = [...projects].reverse();
 
-    return (
-        <>
-            <Header />
-            <Hero />
-            <About />
-            <Projects projects={limitedProject} />
-            <AllProjectsButton />
-            <TechStackHeading />
-            <TechStack />
-            <Footer />
-        </>
-    );
+	const isMedium = useMediaQuery({
+		query: "(max-width: 1900px)",
+	});
+	const isSmall = useMediaQuery({
+		query: "(max-width: 1280px)",
+	});
+
+	const limitedProjects = reversedProjects.slice(0, isSmall ? 2 : isMedium ? 4 : 6);
+
+	return (
+		<>
+			<Header />
+			<Hero />
+			<About />
+			<Projects projects={limitedProjects} />
+			<AllProjectsButton />
+			<TechStackHeading />
+			<TechStack />
+			<Footer />
+		</>
+	);
 }
 
 export default Home;
