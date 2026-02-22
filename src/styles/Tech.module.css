@@ -70,22 +70,14 @@ h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: all 0.3s ease;
 }
 
 .icon svg {
-	transition: all 0.3s ease;
+	transition: all 0.2s ease;
 }
 
-/* .icon:hover {
-	background-color: var(--fg);
-} */
-/* .icon:hover svg {
-	fill: var(--bg);
-} */
-
 .icon.hovered svg {
-	fill: var(--bg); /* Black */
+	fill: var(--bg); 
 }
 
 .hoverBg {
@@ -120,11 +112,7 @@ h2 {
 }
 
 @media screen and (max-width: 960px) {
-	.topGrid {
-		display: none;
-	}
-
-	.bottomGrid {
+	.tech {
 		display: none;
 	}
 
