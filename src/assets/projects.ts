@@ -15,6 +15,7 @@ import projBookInventory from '../assets/proj-book-inventory.png'
 import projFileUploader from '../assets/proj-file-uploader.png'
 import projMembers from '../assets/proj-members-only.png'
 import projBlog from '../assets/proj-blog-post.png'
+import projPooh from '../assets/proj-pooh.png'
 
 
 export type Projects = {
@@ -214,5 +215,16 @@ export const projects:Projects[] = [
       github: "https://github.com/orokidd/blog-client",
     },
     image: projBlog,
+  },
+
+  {
+    id: 18,
+    name: "Where's Pooh",
+    tech: ["React", "Express", "PostgreSQL","Prisma"],
+    links: {
+      demo: "https://wheres-pooh.vercel.app/",
+      github: "https://github.com/orokidd/wheres-pooh",
+    },
+    image: projPooh,
   },
 ];
