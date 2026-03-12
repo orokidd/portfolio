@@ -1,4 +1,4 @@
-import portraitImage from "../assets/portrait.jpg";
+import portraitImage from "../assets/portrait3.jpg";
 import styles from "../styles/Hero.module.css";
 import { useRef } from "react";
 import { gsap } from "gsap";
