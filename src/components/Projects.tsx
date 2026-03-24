@@ -68,6 +68,7 @@ export default function Projects({ projects }: ProjectsProps) {
 							<p className={styles.projectTitle}>{project.name}</p>
 
 							<div className={styles.links}>
+								
 								<a href={project.links.github}>
 									<GithubIcon />
 								</a>
