@@ -6,8 +6,8 @@ export default function Footer() {
 			<p className={styles.orokidd}>orokidd</p>
 			<div className={styles.links}>
 					<a href="#" className={styles.work}>Work</a>
-					<a href="#" className={styles.lab}>Lab</a>
-                    <a href="#" className={styles.email}>Email</a>
+					<a href="https://www.behance.net/hudaasabrie" className={styles.lab}>Behance</a>
+                    <a href="mailto:hudasabrie@email.com#" className={styles.email}>Email</a>
 					<a href="https://github.com/orokidd" className={styles.github} target="_blank">Github</a>
 					<a href="https://www.instagram.com/hudaahuu/" className={styles.insta} target="_blank">Instagram</a>
                     <a href="#" className={styles.linkedIn}>LinkedIn</a>
