@@ -13,13 +13,14 @@ export default function Hero() {
 		const imgRect = imageRef.current.getBoundingClientRect();
   		const heroRect = heroRef.current.getBoundingClientRect();
 
-  		const x = getPosition(e.clientX, imgRect.width, heroRect.width);
+  		const xCoordinates = getPosition(e.clientX, imgRect.width, heroRect.width);
 		
-		gsap.to(imageRef.current, {
-			x: x,
+		const xTo = gsap.quickTo(imageRef.current, "x", {
 			duration: 0.4,
 			ease: "power1.out",
 		});
+
+		xTo(xCoordinates);
 	}
 
 	function getPosition(cursorPosition: number, imgWidth: number, heroWidth: number) {
