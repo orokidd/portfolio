@@ -31,25 +31,25 @@ export default function Projects({ projects }: ProjectsProps) {
 			},
 		});
 
-		const projects = projectsRef.current.children;
+		// const projects = projectsRef.current.children;
 
-		gsap.fromTo(projects,
-			{
-				scale: 0,
-				y: 200,
-			},
-			{
-				scale: 1,
-				y: 0,
-				duration: 1,
-				stagger: 0.1,
-				ease: "power3.out",
-				scrollTrigger: {
-					trigger: projectsRef.current,
-					start: "top 85%",
-				},
-			},
-		);
+		// gsap.fromTo(projects,
+		// 	{
+		// 		scale: 0,
+		// 		y: 200,
+		// 	},
+		// 	{
+		// 		scale: 1,
+		// 		y: 0,
+		// 		duration: 1,
+		// 		stagger: 0.1,
+		// 		ease: "power3.out",
+		// 		scrollTrigger: {
+		// 			trigger: projectsRef.current,
+		// 			start: "top 85%",
+		// 		},
+		// 	},
+		// );
 	}, []);
 
 	return (

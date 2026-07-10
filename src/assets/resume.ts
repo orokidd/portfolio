@@ -29,9 +29,9 @@ export const resume:Resume = {
         {
             company: "CV. Teknik Pratama",
             position: "Administration",
-            startDate: "Jan 2024",
-            endDate: "Current",
-            responsibilities: ["Membuat faktur pajak untuk setiap transaksi dengan aplikasi Coretax", "Membuat SPT Masa dan SPT Tahunan dengan aplikasi Coretax", "Desain post instagram dengan Adobe Photoshop"]
+            startDate: "Jul 2024",
+            endDate: "Des 2024",
+            responsibilities: ["Membuat invoice, faktur pajak, SPT Masa, dan SPT Tahunan dengan aplikasi Coretax", "Entri & rekap data dengan Ms. Excel", "Desain post instagram dengan Adobe Photoshop"]
         },
 
         {
