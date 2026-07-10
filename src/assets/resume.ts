@@ -56,7 +56,7 @@ export const resume:Resume = {
             school: "Institut Teknologi Kalimantan",
             description:"Sistem Informasi (resigned)",
             startDate: "Aug 2022",
-            endDate: "Mar 2022",
+            endDate: "Jul 2023",
         },
 
         {
