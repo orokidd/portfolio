@@ -63,7 +63,7 @@ export const resume:Resume = {
             school: "SMKN 2 Balikpapan",
             description:"Rekayasa Perangkat Lunak",
             startDate: "Jan 2018",
-            endDate: "Apr 2018",
+            endDate: "Apr 2020",
         },
     ],
 
