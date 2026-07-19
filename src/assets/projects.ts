@@ -142,7 +142,7 @@ export const projects:Projects[] = [
 
   {
     id: 11,
-    name: "Shopping Cart",
+    name: "Shopping Landing Page",
     tech: ["HTML", "CSS", "JavaScript", "React"],
     links: {
       demo: "https://shopping-cart-orokidd.vercel.app/",
